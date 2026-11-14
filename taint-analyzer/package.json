@@ -1,0 +1,19 @@
+{
+  "name": "ts-taint-analyzer",
+  "version": "0.1.0",
+  "description": "Static taint analysis for Node/TypeScript services using the TypeScript compiler API. Tracks req.* sources into SQL / child_process / filesystem sinks and emits SARIF.",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "ts-taint": "./bin/ts-taint.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "analyze": "npm run build && node bin/ts-taint.js",
+    "test": "npm run build && node test/verify.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^5.5.0"
+  }
+}

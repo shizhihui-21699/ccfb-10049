@@ -1,0 +1,5 @@
+{
+  "sanitizers": [
+    { "names": ["escapeSql"], "rules": ["sql-injection"] }
+  ]
+}
